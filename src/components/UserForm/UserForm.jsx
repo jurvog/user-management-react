@@ -83,8 +83,8 @@ export default function UserForm({ user, onSave, onClose, roles, statuses }) {
 				</div>
 				{ message?.type !== 'success' && (
 				<div>
-					<button onClick={onClose} className="cancel">Cancel</button>
-					<button type="submit" className="save">Save</button>
+					<button onClick={onClose}>Cancel</button>
+					<button type="submit" className="cta">Save</button>
 				</div>
 				)}
 			</div>

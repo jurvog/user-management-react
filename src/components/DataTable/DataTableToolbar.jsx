@@ -13,11 +13,11 @@ export default function DataTableToolbar({ handleSearch, searchString, filteredS
 					</select>
 				</div>
 				<div>
-					<button className="search">Search</button>
+					<button>Search</button>
 				</div>
 			</form>
 			<div>
-				<button onClick={() => openModal('Add user')} className="add">Add user</button>
+				<button onClick={() => openModal('Add user')} className="cta">Add user</button>
 			</div>
 		</div>
 	);

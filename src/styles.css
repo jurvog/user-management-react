@@ -58,6 +58,41 @@ body {
         font-size: var(--font-size-smallest);
     }
 }
+input, select {
+    border: 1px solid var(--color-border);
+    height: var(--height-input);
+    border-radius: var(--radius-element);
+    padding: var(--padding-input);
+    background-color: #fff;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px;
+    color: inherit;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+}
+button {
+    border: none;
+    border-radius: var(--radius-element);
+    cursor: pointer;
+    transition: var(--transition-button);
+    background: var(--color-neutral-button-bg);
+}
+button:hover {
+    background: var(--color-neutral-button-hover-bg);
+}
+button.cta {
+    background: var(--color-action-button-bg);
+    color: var(--color-action-button-text)
+}
+button.cta:hover {
+    background: var(--color-action-button-hover-bg);
+}
 
 
 .table-container {
@@ -143,15 +178,7 @@ body {
         color: var(--color-text)
     }
     button {
-        border: none;
-        background: var(--color-neutral-button-bg);
         padding: 5px 10px;
-        border-radius: var(--radius-element);
-        transition: var(--transition-button);
-        cursor: pointer;
-    }
-    button:hover {
-        background: var(--color-neutral-button-hover-bg);
     }
     button + button {
         margin-left: 5px;
@@ -206,35 +233,12 @@ body {
             }      
         }
     }
-    :is(input, select) {
-        border: 1px solid var(--color-border);
-        height: var(--height-input);
-        border-radius: var(--radius-element);
-        padding: var(--padding-input);
-    }
     button {
-        border: none;
-        border-radius: var(--radius-element);
         height: var(--height-input);
         min-width: var(--min-width-input);
-        cursor: pointer;
-        transition: var(--transition-button);
         @media (max-width: 600px) {
             min-width: unset;
         }
-    }
-    button.search {
-        background: var(--color-neutral-button-bg);
-    }
-    button.search:hover {
-        background: var(--color-neutral-button-hover-bg);
-    }
-    button.add {
-        background: var(--color-action-button-bg);
-        color: var(--color-action-button-text);
-    }
-    button.add:hover {
-        background: var(--color-action-button-hover-bg);
     }
 }
 
@@ -367,10 +371,6 @@ dialog:has(.form-container) {
     :is(input, select) {
         display: block;
         width: 100%;
-        height: var(--height-input);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-element);
-        padding: var(--padding-input);
     }
     > div:has(> div) {
         display: flex;
@@ -385,25 +385,8 @@ dialog:has(.form-container) {
         justify-content: right;
     }
     button {
-        border: none;
-        border-radius: var(--radius-element);
-        cursor: pointer;
         margin-left: 10px;
         height: var(--height-input);
         min-width: var(--min-width-input);
-        transition: var(--transition-button);
-    }
-    button.save {
-        background: var(--color-action-button-bg);
-        color: #fff;
-    }
-    button.save:hover {
-        background: var(--color-action-button-hover-bg);
-    }
-    button.cancel {
-        background: var(--color-neutral-button-bg);
-    }
-    button.cancel:hover {
-        background: var(--color-neutral-button-hover-bg);
     }
 }
