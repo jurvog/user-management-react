@@ -26,11 +26,25 @@ This project is intended as a **portfolio project**, emphasizing code clarity, m
 ## Tech Stack
 
 * **React**
-* **JavaScript (ES202x)**
+* **TypeScript (strict mode)**
 * **Custom React Hooks**
 * **LocalStorage for persistence**
 
 > TypeScript is planned as a future enhancement.
+
+---
+
+## TypeScript Integration
+
+This project was originally implemented in JavaScript and later **migrated to TypeScript** as part of a learning process.
+
+TypeScript is used to:
+* Define core domain types (e.g. `User`, roles, statuses)
+* Strongly type component props and state
+* Improve safety around shared logic (tables, forms, hooks)
+* Catch errors earlier during refactoring and extension
+
+The focus was on **practical TypeScript usage in a real React codebase**, not on showcasing advanced or overly abstract type patterns.
 
 ---
 
@@ -41,10 +55,12 @@ src/
   components/     // UI components (DataTable, UserForm, etc.)
   hooks/          // Custom hooks (e.g. useLocalStorage)
   utils/          // Shared helper functions
-  App.jsx
+  types/          // Shared TypeScript types
+  App.tsx
+  main.tsx
 ```
 
-The structure is intentionally modular to reflect real-world React projects and to make future refactoring (e.g. adding TypeScript) straightforward.
+The structure is intentionally modular to reflect real-world React projects.
 
 ---
 
@@ -89,8 +105,7 @@ The goal was to write code that is **easy to reason about and easy to extend**, 
 
 ## Future Improvements
 
-* Add TypeScript and define core domain types
-* Improve accessibility (ARIA attributes)
+* Maybe improve accessibility (ARIA attributes)
 
 ---
 

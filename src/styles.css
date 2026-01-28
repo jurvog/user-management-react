@@ -156,7 +156,7 @@ button.cta:hover {
         display: inline-block;
     }
     tr.modified td {
-        background: var(--color-success-rgba);
+        background: #e5f3e5;
     }    
     tr:not(.header-row, .modifed) td {
         transition: background 0.1s ease;
