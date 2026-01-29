@@ -1,7 +1,7 @@
-import { MouseEvent } from 'react';
+import { HandlePageClick } from '@/types';
 
 interface DataTableFooterProps {
-    handlePageClick: (e: MouseEvent<HTMLAnchorElement>, page: number) => void;
+    handlePageClick: HandlePageClick;
     pageInfo: {
         amount: number;
         current: number;

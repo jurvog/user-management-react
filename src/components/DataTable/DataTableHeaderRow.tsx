@@ -1,10 +1,10 @@
-import { ColumnBase, SortState, SortableColumn } from '@/types';
+import { ColumnBase, SortColumn, SortState, SortableColumn } from '@/types';
 import { MouseEvent } from 'react';
 
 interface DataTableHeaderRowProps {
     columns: ColumnBase[];
     sort: SortState;
-    sortColumn: (column: SortableColumn, direction: 'asc' | 'desc') => void;
+    sortColumn: SortColumn;
     filteredStatus: string | null;
 }
 

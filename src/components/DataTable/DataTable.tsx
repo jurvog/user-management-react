@@ -1,6 +1,6 @@
-import { FormEvent, MouseEvent, useCallback, useEffect, useMemo, useState } from 'react';
+import { FormEvent, useCallback, useEffect, useMemo, useState } from 'react';
 
-import { SortableColumn, User, UserTableActions } from '@/types';
+import { HandlePageClick, SortColumn, User, UserTableActions } from '@/types';
 
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { filter, paginate } from '@/utils/data-functions';
@@ -52,7 +52,7 @@ export default function DataTable() {
         });
     }
 
-    function sortColumn(column: SortableColumn, direction: 'asc' | 'desc') {
+    const sortColumn: SortColumn = (column, direction) => {
         setModifiedUserId(null);
         updateSettings({
             sort: {
@@ -62,7 +62,7 @@ export default function DataTable() {
         });
     }
 
-    function handlePageClick(e: MouseEvent<HTMLAnchorElement>, page: number) {
+    const handlePageClick: HandlePageClick = (e, page) => {
         e.preventDefault();
         setModifiedUserId(null);
         updateSettings({
