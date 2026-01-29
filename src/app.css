@@ -33,7 +33,7 @@
     --padding-input: 0 10px;
 
     --height-input: 44px;
-    
+
     --min-width-input: 100px;
 
     --transition-button: background 0.2s ease;
@@ -120,7 +120,7 @@ button.cta:hover {
         border-collapse: collapse;
         width: 100%;
         min-width: 700px;
-    }    
+    }
     :is(th, td) {
         padding: var(--padding-table);
         vertical-align: middle;
@@ -157,11 +157,11 @@ button.cta:hover {
     }
     tr.modified td {
         background: #e5f3e5;
-    }    
-    tr:not(.header-row, .modifed) td {
+    }
+    tr:not(.header-row, .modified) td {
         transition: background 0.1s ease;
     }
-    tr:not(.header-row, .modifed):hover td {
+    tr:not(.header-row, .modified):hover td {
         background: #f9f9f9;
     }
     tr :is(th, td):nth-of-type(4) {
@@ -188,7 +188,7 @@ button.cta:hover {
         padding: 2px 10px;
         border-radius: var(--radius-element);
         font-size: 0.9em;
-    } 
+    }
     span.active {
         color: var(--color-status-active);
         background: var(--color-status-active-rgba);
@@ -216,7 +216,7 @@ button.cta:hover {
         flex-wrap: wrap;
         gap: 10px;
         position: unset;
-    }    
+    }
 
     form {
         display: flex;
@@ -225,12 +225,12 @@ button.cta:hover {
         @media (max-width: 600px) {
             display: grid;
             grid-gap: 10px;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) minmax(0, 1fr);  
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) minmax(0, 1fr);
             :is(input, button, select) {
                 width: 100%;
                 font-size: var(--font-size-smallest);
                 padding: 0 5px;
-            }      
+            }
         }
     }
     button {
